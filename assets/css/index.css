@@ -1,0 +1,57 @@
+
+:root {
+  --padding: 1.5rem;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-green: #7ece29;
+  --color-grey: rgba(119, 119, 119, 0.51);
+  --color-light: #efefef;
+  --color-text: var(--color-black);
+  --color-text-grey: var(--color-grey);
+  --color-background: var(--color-white);
+  --color-code-light-grey:  #cacbd1;
+  --color-code-comment:     #a9aaad;
+  --color-code-white:       #c5c9c6;
+  --color-code-red:         #d16464;
+  --color-code-orange:      #de935f;
+  --color-code-yellow:      #f0c674;
+  --color-code-green:       #a7bd68;
+  --color-code-aqua:        #8abeb7;
+  --color-code-blue:        #7e9abf;
+  --color-code-purple:      #b294bb;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.logo {
+  height: auto;
+  top: 0;
+  width: 15%;
+}
+/*.header {*/
+/*   position: relative;*/
+/*   display: flex;*/
+/*   flex-wrap: wrap;*/
+/*   justify-content: space-between;*/
+/*   margin-right: -1rem;*/
+/*   margin-left: -1rem;*/
+/*   margin-bottom: 6rem;*/
+/* }*/
+
+/*.logo {*/
+/*  padding: 1rem;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  font-weight: 600;*/
+/*  cursor: pointer;*/
+/*}*/
+/*.menu {*/
+/*  display: flex;*/
+/*}*/
+/*.menu a {*/
+/*  padding: 1rem;*/
+/*  display: block;*/
+/*}*/
+/*.menu a[aria-current] {*/
+/*  text-decoration: underline;*/
+/*}*/

@@ -1,0 +1,11 @@
+title: Tag
+preset: page
+num: one
+
+status:
+  unlisted: true
+
+fields:
+  tags:
+    label: Tags
+    type: tags
