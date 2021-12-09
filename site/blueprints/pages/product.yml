@@ -1,32 +1,67 @@
 title: Product
-preset: page
 num: zero
 
 status:
   draft: true
   listed: true
 
-fields:
-  price:
-    type: number
-    step: 0.01
-    before: €
-  tags:
-    label: Tags
-    type: multiselect
-    fetch: site.tags
-    options: query
-    query: site.pages.unlisted.tags.
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          short description:
+            type: text
+          Description:
+            label: description
+            type: textarea
+          pre-reqs:
+            type: structure
+            fields:
+              required:
+                label: required
+                type: text
+          price:
+            type: number
+            step: 0.01
+            before: €
+          difficulty:
+            type: range
+            step: 1
+            min: 1
+            max: 5
+            tooltip:
+              before: ★
+          time:
+            type: number
+            min: 1
+            after: Minutes
+          link:
+            type: url
+          tags:
+            label: Tags
+            type: multiselect
+            fetch: site.tags
+            options: query
+            query: site.find("tags").tags().split
 
-  link:
-    type: url
-  description:
-    type: textarea
+  sidebar:
+    width: 1/3
+    sections:
+      logo:
+        extends: sections/image
+        template: cover
+        max: 1
+      cover:
+        label: Cover Image
+        type: files
+        options: images
 
-sidebar:
-  image:
-    extends: sections/image
-    template: cover
-    min: 1
-    image:
-      ratio: 1/1
+
+
+
+
+
+

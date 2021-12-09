@@ -67,7 +67,7 @@
     <nav class="sticky-top pt-4 navbar navbar-expand-lg navbar-light">
         <div class="d-flex flex-grow 1">
             <a class="navbar-brand d-none d-lg-inline-block" href="<?= $site->url() ?>">
-                <img src="<?= $site->files()->findBy('filename', 'logo2.png')->url() ?>"  class="logo d-inlineblock align-top" alt="">
+                <img src="<?= $site->files()->findBy('filename', 'logo2.png')->url() ?>"  class="logo d-inlineblock align-top" width="100" height="65" alt="">
             </a>
         </div>
         <ul class="navbar-nav ml-auto flex-nowrap">
