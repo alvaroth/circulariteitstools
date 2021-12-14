@@ -12,7 +12,8 @@ columns:
       content:
         type: fields
         fields:
-          short description:
+          short_description:
+            label: Short description
             type: text
           Description:
             label: description
