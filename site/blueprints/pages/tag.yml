@@ -6,6 +6,9 @@ status:
   unlisted: true
 
 fields:
-  tags:
-    label: Tags
+  tags_product:
+    label: Product Niveau Tags
+    type: tags
+  tags_company:
+    label: Bedrijfs Niveau Tags
     type: tags

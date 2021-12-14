@@ -40,12 +40,18 @@ columns:
             after: Minutes
           link:
             type: url
-          tags:
-            label: Tags
+          product_tags:
+            label: Product tags
             type: multiselect
-            fetch: site.tags
+            fetch: site.tags_product
             options: query
-            query: site.find("tags").tags().split
+            query: site.find("tags").tags_product().split
+          company_tags:
+            label: Company tags
+            type: multiselect
+            fetch: site.tags_company
+            options: query
+            query: site.find("tags").tags_company().split
 
   sidebar:
     width: 1/3
