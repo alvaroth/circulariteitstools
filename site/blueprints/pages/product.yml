@@ -18,7 +18,7 @@ columns:
           Description:
             label: Beschrijving
             type: textarea
-          pre-reqs:
+          pre_reqs:
             label: Van te voren nodig
             type: structure
             fields:
@@ -28,14 +28,14 @@ columns:
           price:
             type: structure
             label: Prijs
-            before: €
             fields:
               name:
                 label: Naam
                 type: text
               price:
                 label: Prijs
-                type: text
+                before: €
+                type: number
           difficulty:
             type: range
             label: Moeilijkheid
