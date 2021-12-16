@@ -13,23 +13,32 @@ columns:
         type: fields
         fields:
           short_description:
-            label: Short description
+            label: Korte beschrijving
             type: text
           Description:
-            label: description
+            label: Beschrijving
             type: textarea
           pre-reqs:
+            label: Van te voren nodig
             type: structure
             fields:
               required:
-                label: required
+                label: Benodigdheden
                 type: text
           price:
-            type: number
-            step: 0.01
+            type: structure
+            label: Prijs
             before: €
+            fields:
+              name:
+                label: Naam
+                type: text
+              price:
+                label: Prijs
+                type: text
           difficulty:
             type: range
+            label: Moeilijkheid
             step: 1
             min: 1
             max: 5
@@ -37,22 +46,24 @@ columns:
               before: ★
           time:
             type: number
+            label: Tijd
             min: 1
-            after: Minutes
+            after: Minuten
           link:
+            label: Website
             type: url
+          company_tags:
+            label: Bedrijf tags
+            type: multiselect
+            fetch: site.tags_company
+            options: query
+            query: site.find("tags").tags_company().split
           product_tags:
             label: Product tags
             type: multiselect
             fetch: site.tags_product
             options: query
             query: site.find("tags").tags_product().split
-          company_tags:
-            label: Company tags
-            type: multiselect
-            fetch: site.tags_company
-            options: query
-            query: site.find("tags").tags_company().split
 
   sidebar:
     width: 1/3
