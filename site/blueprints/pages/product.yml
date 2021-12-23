@@ -42,8 +42,7 @@ columns:
             step: 1
             min: 1
             max: 5
-            tooltip:
-              before: ★
+            before: ★
           time:
             type: number
             label: Tijd
@@ -69,14 +68,15 @@ columns:
     width: 1/3
     sections:
       logo:
-        extends: sections/image
-        template: cover
-        max: 1
-      cover:
-        label: Cover Image
         type: files
-        options: images
-
+        extends: sections/image
+        template: single-image
+        max: 1
+      previews:
+        headline: Gallerij
+        type: files
+        template: gallery
+        layout: list
 
 
 

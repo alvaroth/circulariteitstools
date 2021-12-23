@@ -1,0 +1,36 @@
+.bg-light {
+    background-color: var(--color-light);
+}
+.bg-grey {
+    background-color: rgb(255, 163, 63);
+    background-size: cover;
+}
+.container-fluid {
+    padding:0 !important;
+}
+i[class^='bi-'],div[class*=' bi']{
+     font-size: 1.5rem;
+}
+.slick-container {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+}
+.slick-container.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+}
+.list-group-item {
+    padding: .75rem 2rem;
+}
+.btn-primary {
+    background-color: rgb(255, 163, 63);
+    border-color: rgb(255, 172, 83);;
+}
+.btn-primary:hover {
+    background-color: rgb(255, 143, 43);
+    border-color: rgb(255, 152, 63);;
+}
+
+

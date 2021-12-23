@@ -2,8 +2,8 @@ type: pages
 headline: Products
 parent: site.find("shop")
 template: product
-info: "€ {{ page.price }} / {{ page.design }}"
+info: " {{ page.short_description }} {{ page.link }}"
 image:
-  src: page.image
+  query: page.images.template("single-image").first
   ratio: 1/1
   back: pattern

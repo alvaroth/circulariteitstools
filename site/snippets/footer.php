@@ -12,32 +12,18 @@
   </main>
 
   <footer class="footer">
-<!--    <div class="grid boxes">-->
-<!--      <div class="column" style="--columns: 6">-->
-<!--        <h2><a href="https://getkirby.com">Made with Kirby</a></h2>-->
-<!--        <p>-->
-<!--          Kirby: the file-based CMS that adapts to any project, loved by developers and editors alike-->
-<!--        </p>-->
-<!--      </div>-->
-<!--      <div class="column" style="--columns: 2">-->
-<!--        <h2>Pages</h2>-->
-<!--        <ul>-->
-<!--          --><?php //foreach ($site->children()->listed() as $example): ?>
-<!--          <li><a href="--><?//= $example->url() ?><!--">--><?//= $example->title()->html() ?><!--</a></li>-->
-<!--          --><?php //endforeach ?>
-<!--        </ul>-->
-<!--      </div>-->
-<!--      <div class="column" style="--columns: 2">-->
-<!--        <h2>Kirby</h2>-->
-<!--        <ul>-->
-<!--          <li><a href="https://getkirby.com">Website</a></li>-->
-<!--          <li><a href="https://getkirby.com/docs">Docs</a></li>-->
-<!--          <li><a href="https://forum.getkirby.com">Forum</a></li>-->
-<!--          <li><a href="https://chat.getkirby.com">Chat</a></li>-->
-<!--          <li><a href="https://github.com/getkirby">GitHub</a></li>-->
-<!--        </ul>-->
-<!--      </div>-->
-    </div>
+      <div class="container">
+          <footer class="py-3 my-4">
+              <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+              </ul>
+              <p class="text-center text-muted">© 2021 Company, Inc</p>
+          </footer>
+      </div>
   </footer>
 
   <?= js([
