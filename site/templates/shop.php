@@ -130,14 +130,12 @@
                                             <table class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th scope="col">#</th>
                                                     <th scope="col">Benodigdheden</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
                                                 <?php foreach ($product->pre_reqs()->toStructure() as $pre_req): ?>
                                                     <tr>
-                                                        <td><?= $pre_req ?></td>
                                                         <td><?= $pre_req->required() ?></td>
                                                     </tr>
                                                 <?php endforeach ?>
@@ -148,7 +146,6 @@
                                             <table class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th scope="col">#</th>
                                                     <th scope="col">Versie</th>
                                                     <th scope="col">Prijs</th>
                                                 </tr>
@@ -156,7 +153,6 @@
                                                 <tbody>
                                                 <?php foreach ($product->price()->toStructure() as $price): ?>
                                                     <tr>
-                                                        <td><?= $price ?></td>
                                                         <td><?= $price->name() ?></td>
                                                         <td>€ <?= $price->price() ?></td>
                                                     </tr>
