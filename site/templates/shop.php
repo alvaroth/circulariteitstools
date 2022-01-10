@@ -88,7 +88,7 @@
                                     <div class="row mb-3 pl-2 pr-2">
                                         <div class="col-md-6">
                                             <img class="img-fluid img-thumbnail"
-                                                 src="<?= (!$product->image()) ? $site->files()->findBy('filename', 'no_image.jpg')->url() :$product->images()->template('single-image'); ?>">
+                                                 src="<?= (!$product->image()) ? $site->files()->findBy('filename', 'no_image.jpg')->url() :$product->images()->template('single-image'); ?>" style="max-width: 10vw; ">
                                         </div>
                                         <div class="col-md-5 swiper">
                                             <div class="swiper-wrapper">
