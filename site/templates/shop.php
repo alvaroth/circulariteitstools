@@ -10,20 +10,20 @@
                            value="company"
                            id="company">
                     Bedrijfsniveau
-                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"
-                       data-placement="right"
-                       title="tooltip">
-                    </i>
+<!--                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"-->
+<!--                       data-placement="right"-->
+<!--                       title="tooltip">-->
+<!--                    </i>-->
                 </label>
                 <label class="list-group-item">
                     <input class="form-check-input category-input me-1" type="checkbox"
                            value="product"
                            id="product">
                     Productniveau
-                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"
-                       data-placement="right"
-                       title="tooltip">
-                    </i>
+<!--                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"-->
+<!--                       data-placement="right"-->
+<!--                       title="tooltip">-->
+<!--                    </i>-->
                 </label>
         </div>
         <h4>Bedrijfsniveau</h4>
@@ -34,10 +34,10 @@
                            value="<?= preg_replace("/[^a-z0-9]+/i", "", $tag); ?>"
                            id="<?= preg_replace("/[^a-z0-9]+/i", "", $tag); ?>">
                     <?= $tag ?>
-                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"
-                            data-placement="right"
-                            title="tooltip">
-                    </i>
+<!--                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"-->
+<!--                            data-placement="right"-->
+<!--                            title="tooltip">-->
+<!--                    </i>-->
                 </label>
             <?php endforeach ?>
         </div>
@@ -49,22 +49,23 @@
                            value="<?= preg_replace("/[^a-z0-9]+/i", "", $tag); ?>"
                            id="<?= preg_replace("/[^a-z0-9]+/i", "", $tag); ?>">
                     <?= $tag ?>
-                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"
-                       data-placement="right"
-                       title="">
-                    </i>
+<!--                    <i class="bi bi-question-circle float-right" data-toggle="Tooltip"-->
+<!--                       data-placement="right"-->
+<!--                       title="">-->
+<!--                    </i>-->
                 </label>
             <?php endforeach ?>
         </div>
     </div>
     <div class="col-md-9 ">
-        <div class="row ">
+        <div class="row">
             <?php foreach ($page->children()->listed() as $product): ?>
-                <div class="card col-md-2 mr-3 ml-3 mb-3 ">
+                <div class="card col-md-2 mr-3 ml-3 mb-3">
+                    <div class="frame">
+                        <span class="helper"></span><img class="card-img-top"
+                             src="<?= (!$product->image()) ? $site->files()->findBy('filename', 'no_image.jpg')->url() : $product->images()->template('single-image'); ?>">
+                    </div>
                     <div class="card-body product <?= getClassSafeUrl($product) ?>" id="<?= $product ?>">
-                            <img class="card-img-top"
-                                 src="<?= (!$product->image()) ? $site->files()->findBy('filename', 'no_image.jpg')->url() : $product->images()->template('single-image'); ?>"
-                                 >
                             <h5 class="card-title product-title"><?= $product->title() ?></h5>
                             <p class="card-subtitle product-short-description mb-2 text-muted"><?= $product->short_description() ?></p>
                     </div>
@@ -87,18 +88,27 @@
                                     <div class="row mb-3 pl-2 pr-2">
                                         <div class="col-md-6">
                                             <img class="img-fluid img-thumbnail"
-                                                 src="<?= (!$product->image()) ? $site->files()->findBy('filename', 'no_image.jpg')->url() :$product->images()->template('single-image'); ?>"
-                                                 width="200vh"
-                                                 height="auto">
+                                                 src="<?= (!$product->image()) ? $site->files()->findBy('filename', 'no_image.jpg')->url() :$product->images()->template('single-image'); ?>">
                                         </div>
-                                        <div class="col-md-5 slick-container">
-                                            <?php foreach ($product->images()->template('gallery') as $image): ?>
-                                            <div >
-                                                <img data-enlargeable
-                                                     src="<?= $image->url() ?>"
-                                                     width="100" style="cursor: zoom-in">
+                                        <div class="col-md-5 swiper">
+                                            <div class="swiper-wrapper">
+                                                <?php foreach ($product->images()->template('gallery') as $image): ?>
+                                                    <div class="swiper-slide">
+                                                        <img class="swiper-image" data-enlargeable
+                                                             src="<?= $image->url() ?>"
+                                                             style="cursor: zoom-in">
+                                                    </div>
+                                                <?php endforeach ?>
                                             </div>
-                                            <?php endforeach ?>
+                                            <!-- If we need pagination -->
+                                            <div class="swiper-pagination"></div>
+
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+
+                                            <!-- If we need scrollbar -->
+                                            <div class="swiper-scrollbar"></div>
                                         </div>
                                     </div>
                                     <div class="row mb-3 pl-2 pr-2">
@@ -117,12 +127,40 @@
                                     </div>
                                     <div class="row mb-3 bg-grey pt-3 pb-3">
                                         <div class="col-md-4 text-center">
-                                            <i class="bi-star"> </i><?= $product->difficulty() ?>
+                                            <div class="row justify-content-center">
+                                                Moeilijkheidsgraad
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <span style="padding-right: 3px">
+                                                    <i class="bi-star"> </i><?= $product->difficulty() ?>
+                                                </span>
+                                                <span>
+                                                    / 5
+                                                </span>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4 text-center"><i
-                                                    class="bi-clock"> </i><?= $product->time() ?></div>
-                                        <div class="col-md-4 text-center"><a href="<?= $product->link() ?>" target="_blank"><i
-                                                    class="bi-link"> </i></a></div>
+                                        <div class="col-md-4 text-center">
+                                            <div class="row justify-content-center">
+                                                Invultijd
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <span style="padding-right: 3px">
+                                                    <i class="bi-clock"> </i>
+                                                </span>
+                                                <span>
+                                                    <?= $product->time() ?> Minuten
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                                <div class="row justify-content-center">
+                                                    Link
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <a href="<?= $product->link() ?>" target="_blank"><i class="bi-link"></i> </a>
+                                                </div>
+
+                                            </a></div>
                                     </div>
 
                                     <div class="row justify-content-between pl-3 pr-3">
@@ -197,17 +235,26 @@ function getClassSafeUrl($product)
         var checkboxes_categories = document.getElementsByClassName("category-input");
 
         $( document ).ready(function() {
-            $('.slick-container').slick({
-                dots: true,
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                pauseOnHover: false,
-                pauseOnFocus: false,
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
             });
 
             for (var i = 0; i < checkboxes_tags_joined.length; i++) {
@@ -229,7 +276,7 @@ function getClassSafeUrl($product)
             }
             modal = $('<div>').css({
                 background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
-                backgroundSize: 'contain',
+                backgroundSize: '33% auto',
                 width: '100%',
                 height: '100%',
                 position: 'fixed',

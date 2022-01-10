@@ -73,7 +73,7 @@ columns:
         template: single-image
         max: 1
       previews:
-        headline: Gallerij
+        headline: Galerij
         type: files
         template: gallery
         layout: list

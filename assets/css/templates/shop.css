@@ -9,18 +9,10 @@
     padding:0 !important;
 }
 i[class^='bi-'],div[class*=' bi']{
-     font-size: 1.5rem;
+     font-size: 1rem;
+    padding-left: 10px;
 }
-.slick-container {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease;
-    -webkit-transition: opacity 1s ease;
-}
-.slick-container.slick-initialized {
-    visibility: visible;
-    opacity: 1;
-}
+
 .list-group-item {
     padding: .75rem 2rem;
 }
@@ -32,5 +24,47 @@ i[class^='bi-'],div[class*=' bi']{
     background-color: rgb(255, 143, 43);
     border-color: rgb(255, 152, 63);;
 }
+.frame {
+    height: 20vh;
+    white-space: nowrap;
+    text-align: center;
+    margin: 1em 0;
+}.helper {
+     display: inline-block;
+     height: 100%;
+     vertical-align: middle;
+ }
+.img-top {
+    vertical-align: middle;
+    max-height: 20vh;
+    max-width: 10vw;
+}
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
+.swiper-slide img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
