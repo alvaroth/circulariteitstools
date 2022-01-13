@@ -2,7 +2,7 @@
 
 <?php snippet('intro') ?>
 <div class="row">
-    <div class="col-md-2 ml-4">
+    <div class="col-2 ml-4">
         <h4>Categorieën</h4>
         <div class="list-group mb-3">
                 <label class="list-group-item">
@@ -57,10 +57,10 @@
             <?php endforeach ?>
         </div>
     </div>
-    <div class="col-md-9 ">
+    <div class="col-xl-9">
         <div class="row">
             <?php foreach ($page->children()->listed() as $product): ?>
-                <div class="card col-md-2 mr-3 ml-3 mb-3">
+                <div class="card col-2 mr-3 ml-3 mb-3">
                     <div class="frame">
                         <span class="helper"></span><img class="card-img-top"
                              src="<?= (!$product->image()) ? $site->files()->findBy('filename', 'no_image.jpg')->url() : $product->images()->template('single-image'); ?>">
@@ -112,7 +112,7 @@
                                         </div>
                                     </div>
                                     <div class="row mb-3 pl-2 pr-2">
-                                        <div class="col-md-4-auto"><h4><?= $product->short_description() ?></h4></div>
+                                        <div class="col-4-auto"><h4><?= $product->short_description() ?></h4></div>
                                     </div>
                                     <div class="row mb-3 pl-2 pr-2">
                                         <?php foreach ($product->product_tags()->split() as $pro_tags): ?>
@@ -123,10 +123,10 @@
                                         <?php endforeach ?>
                                     </div>
                                     <div class="row mb-3 pl-2 pr-2">
-                                        <div class="col-md-4-auto"><?= $product->description() ?></div>
+                                        <div class="col-4-auto"><?= $product->description() ?></div>
                                     </div>
                                     <div class="row mb-3 bg-grey pt-3 pb-3">
-                                        <div class="col-md-4 text-center">
+                                        <div class="col-4 text-center">
                                             <div class="row justify-content-center">
                                                 Moeilijkheidsgraad
                                             </div>
@@ -139,7 +139,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 text-center">
+                                        <div class="col-4 text-center">
                                             <div class="row justify-content-center">
                                                 Invultijd
                                             </div>
@@ -152,7 +152,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 text-center">
+                                        <div class="col-4 text-center">
                                                 <div class="row justify-content-center">
                                                     Link
                                                 </div>
@@ -180,7 +180,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <div class="col-md-5">
+                                        <div class="col-5">
                                             <table class="table">
                                                 <thead>
                                                 <tr>
@@ -305,7 +305,7 @@ function getClassSafeUrl($product)
                     loopThroughCheckboxes(checkboxes_company_tags,e.currentTarget.checked)
                     break;
                 default:
-                    console.log("help")
+                    console.log("help");
                     break;
             }
         }
@@ -321,14 +321,29 @@ function getClassSafeUrl($product)
 
         var changeResult = function (e) {
             $(".product").parent().hide();
+            var products = document.getElementsByClassName("product")
             var noneChecked = true;
+            var js_tag = [];
             for (var i = 0; i < checkboxes_tags_joined.length; i++) {
                 for (var l = 0; l < checkboxes_tags_joined[i].length; l++) {
                     if ($(checkboxes_tags_joined[i][l]).is(":checked")) {
-                        var js_tag = checkboxes_tags_joined[i][l].id;
+                        js_tag.push(checkboxes_tags_joined[i][l].id);
                         noneChecked = false;
-                        $(".product." + js_tag).parent().show();
                     }
+                }
+            }
+            var match = true;
+            for (let i = 0; i < products.length; i++) {
+                for (let k = 0; k < js_tag.length; k++) {
+                    if(!products[i].classList.contains(js_tag[k])){
+                        match = false;
+                        break;
+                    }else{
+                        match = true;
+                    }
+                }
+                if(match){
+                    $(products[i]).parent().show();
                 }
             }
             if(e && !e.currentTarget.checked){
