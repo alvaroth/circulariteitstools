@@ -1,0 +1,50 @@
+Title: Circularity Check
+
+----
+
+Short-description: Een globale kijk opdoen hoe goed het desbetreffende product scoort op duurzaamheid/circulariteit.
+
+----
+
+Description:
+
+Circularity Check betreft een gratis online self-assessent van ongeveer 60 vragen (afhankelijk van de te geven antwoorden). Hierbij kan worden getoetst op een service en/of een specifiek product. Na het invullen van de vragen wordt door de tool verschillende scores gegeven op meerdere onderdelen; des te hoger de score, des te duurzamer/circulairder dit onderdeel wordt bevonden door het programma. Hieruit valt als gebruiker mogelijk te concluderen waar verbeterpunten mogelijk zijn en op welke punten de gebruiker reeds voldoet aan een acceptabel niveau. Gebaseerd op deze scores weergeeft de tool grafieken waar de scores in worden weergegeven.
+
+Bekijk ook de video van Circularity Check: https://www.youtube.com/watch?v=uA2qoqr8A2w&t=5s
+
+----
+
+Pre-reqs:
+
+- 
+  required: Productinformatie
+- 
+  required: Productmateriaalkennis
+
+----
+
+Price:
+
+- 
+  name: Circularity Check
+  price: 0
+
+----
+
+Difficulty: 1
+
+----
+
+Time: 30
+
+----
+
+Link: https://ecopreneur.eu/circularity-check-landing-page/
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Energieverbruik productie, Giftige stoffen, Recyclebaarheid, Transport, Restafval, Vervanging, Functionele waarde, Schaarste materialen, Restwaarde, Materialenpaspoort

@@ -1,0 +1,47 @@
+Title: BCI
+
+----
+
+Short-description: Meten van de circulariteit van een gebouw
+
+----
+
+Description: BCI Gebouw is een meetinstrument waarmee de circulaire potentie van een vastgoedobject kan worden bepaald. BCI Gebouw geeft invulling aan één van de  kerndoelen van de transitieagenda Circulaire Bouweconomie: het meetbaar  maken van circulariteit om bewustwording bij directbetrokkenen en de maatschappij te creëren. Ook sluit BCI Gebouw aan bij de uniforme, effectieve meetmethode, zoals deze door platform CB’23* is ontwikkeld samen met opdrachtgevers en opdrachtnemers. Waar andere meetinstrumenten zich vooral richten op het grondstof- en materiaalgebruik, maakt de BCI ook de losmaakbaarheid van een gebouw inzichtelijk.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Gegevens gebouw
+
+----
+
+Price:
+
+- 
+  name: BCI zonder validatie
+  price: 500
+- 
+  name: BCI met validatie
+  price: 800
+
+----
+
+Difficulty: 2
+
+----
+
+Time: 90
+
+----
+
+Link: https://bcigebouw.nl/
+
+----
+
+Company-tags: Energieverbruik bedrijf, Installaties, Nutsvoorziening
+
+----
+
+Product-tags: Recyclebaarheid, Vervanging, Materialenpaspoort

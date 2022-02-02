@@ -1,0 +1,48 @@
+Title: MOD/D approach, material sense
+
+----
+
+Short-description: Het ontwerpen van een circulair product
+
+----
+
+Description: Material Sense is een onafhankelijke organisatie voor materiaalinnovatie. Material Sense richt zich op de materialisatie van producten en de omgeving, door middel van ontwerp en ontwikkeling, onderzoek, experimenten en verkenning. Sinds 2002 maakt Material Sense de wereld van materialen zichtbaar en tastbaar door middel van reizende tentoonstellingen, inspiratielezingen en publicaties. Materiële ervaringen worden gecreëerd door middel van training door gebruik te maken van de Materials Oriented Design & Development methode (MOD/D), ontwikkeld door Material Sense. Er wordt gekeken vanuit het perspectief van zintuiglijke expressie en de waarde van materialen. Door het samenspel en de interactie manifesteert materialiteit zich in nieuwe producten.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Gegevens bedrijf en producten
+- 
+  required: >
+    Eventueel volgen van workshops en
+    lectures
+
+----
+
+Price:
+
+- 
+  name: MOD/D approach offerte
+  price: null
+
+----
+
+Difficulty: 2
+
+----
+
+Time: 60
+
+----
+
+Link: https://www.materialsense.com/
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Energieverbruik productie, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Transport, Restafval, Vervanging, Functionele waarde, Schaarste materialen, Biodiversiteit, Restwaarde, Materialenpaspoort

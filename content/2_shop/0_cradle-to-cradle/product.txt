@@ -1,0 +1,50 @@
+Title: Cradle to Cradle
+
+----
+
+Short-description: Van wieg tot wieg
+
+----
+
+Description:
+
+Cradle to Cradle is een betaalde meettool. Deze tool ziet een product als de keten van ontstaan (winning van grondstoffen, productie), gebruik (energieverbruik en verbruik van hulpstoffen zoals waspoeder en benzine) en afdanking (hergebruik en stort). Het "minder slecht maken" van het product bestaat uit het kiezen van schonere grondstoffen, het zuiniger maken van het product in gebruik, en het optimaliseren voor recycling. Dit kan, ondanks wat de term recycling doet vermoeden, gezien worden als ontwerpen van wieg tot graf. 
+
+De centrale gedachte van de filosofie achter cradle to cradle (wieg tot wieg), is dat alle gebruikte materialen na hun leven in het ene product, nuttig kunnen worden ingezet in een ander product. Het eerste verschil met conventioneel hergebruik is dat er geen kwaliteitsverlies is, en geen restproducten die alsnog gestort worden. Deze kringloop wordt bedoeld met het motto: waste equals food. Daarnaast is het mogelijk om het bedrijfspand en haar werknemers te beoordelen d.m.v. deze tool.
+
+----
+
+Pre-reqs:
+
+- 
+  required: >
+    Afhankelijk van productsoort alle
+    productgegevens
+
+----
+
+Price:
+
+- 
+  name: Cradle to Cradle
+  price: 390
+
+----
+
+Difficulty: 4
+
+----
+
+Time: 1
+
+----
+
+Link: https://epea.com/nl/over-ons/cradle-to-cradle/
+
+----
+
+Company-tags: Energieverbruik bedrijf, Installaties, Verbruik materieel, Nutsvoorziening
+
+----
+
+Product-tags: Levensduur, Energieverbruik productie, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Restafval, Functionele waarde, Schaarste materialen, Restwaarde, Materialenpaspoort

@@ -1,0 +1,57 @@
+Title: Circularity calculator
+
+----
+
+Short-description: Inzicht in materiaalstromen en vergelijken van productieopties
+
+----
+
+Description:
+
+De Circularity Calculator is een online dashboard waarbij de focus wordt gelegd op het in kaart brengen van de materiaalstromen met betrekking tot hergebruik, herfabricage en recycling. Deze tool is speciaal ontwikkeld door, met en voor ontwerpers die werken aan circulaire producten. Bij het gebruik van deze virtuele dashboard is er vrijwel geen leercurve voor het maken van een snelle calculatie. 
+
+Wanneer u een beginnende gebruiker bent die eenvoudig gebruik wil maken van de tool, dan volstaat de gratis licentie voor u. Mocht u een ervaren gebruiker zijn en producten willen vergelijken of zelfs advies willen dan is er de mogelijkheid voor een betaalde licenties.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Inzicht in herkomst materiaalstromen
+
+----
+
+Price:
+
+- 
+  name: Free
+  price: 0
+- 
+  name: Demo
+  price: 145
+- 
+  name: Edu
+  price: 1200
+- 
+  name: Pro
+  price: 0
+
+----
+
+Difficulty: 1
+
+----
+
+Time: 30
+
+----
+
+Link: http://circularitycalculator.com
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Recyclebaarheid, Restafval, Vervanging, Restwaarde

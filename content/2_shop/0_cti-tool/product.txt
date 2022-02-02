@@ -1,0 +1,58 @@
+Title: CTI tool
+
+----
+
+Short-description: Meet de circulaire prestaties van uw bedrijf en stuur uzelf met de Circulaire Transitie Indicatoren.
+
+----
+
+Description:
+
+De CTI-tool structureert gegevens en berekent resultaten met betrekking tot de materialenstromen van producten, daarnaast ondersteunt het bedrijven bij het nemen van concrete acties om hun circulaire doelen te bereiken. Het ondersteunt gebruikers ook om contact op te nemen met interne belanghebbenden en waardeketenpartners voor gegevensverzoeken die vertrouwelijkheidsproblemen voorkomen. 
+
+Door gebruik te maken van de kracht van digitalisering en slimme softwareoplossingen, stelt de CTI Tool bedrijven in staat hun transitie naar een circulaire economie te versnellen en hun circulariteitsbaseline volledig te begrijpen.
+
+Er zijn meerdere licenties verkrijgbaar, van gratis tot €10.000 per jaar met diverse opties.
+
+Bekijk ook de video over de CTI-tool: https://vimeo.com/513281879
+
+----
+
+Pre-reqs:
+
+- 
+  required: Inzicht in materiaalstromen
+
+----
+
+Price:
+
+- 
+  name: CTI essential
+  price: 0
+- 
+  name: CTI Professional
+  price: 5000
+- 
+  name: CTI Champions
+  price: 10000
+
+----
+
+Difficulty: 4
+
+----
+
+Time: 60
+
+----
+
+Link: https://ctitool.com/
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Recyclebaarheid, Restafval, Vervanging, Restwaarde

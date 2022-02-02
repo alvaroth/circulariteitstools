@@ -1,0 +1,48 @@
+Title: Madaster Circularity
+
+----
+
+Short-description: Het koppelen van een materialenpaspoort aan materialen van een gebouw/object, bouw-gerelateerd.
+
+----
+
+Description:
+
+Bij deze tool wordt algeheel gekeken naar materialen, producten en elementen die worden toegepast in gebouw gerelateerde objecten. Deze worden geregistreerd en gedocumenteerd in het online Madaster-platform. Het platform genereert hierop een materialenpaspoort voor gebouwen, constructieobjecten en portfolio’s. Aan de hand van dit materialenpaspoort wordt in kaart gebracht hoe duurzaam en/of circulair een product is. Daarnaast geeft het de mogelijkheid om aan het eind van een levenscyclus van een product materialen op een juiste manier te scheiden en wellicht her te gebruiken.
+
+Bekijk ook de video over Madaster: https://www.youtube.com/watch?v=cltOjqNbW60
+
+----
+
+Pre-reqs:
+
+- 
+  required: Gegevens gebouw
+
+----
+
+Price:
+
+- 
+  name: Madaster offerte
+  price: null
+
+----
+
+Difficulty: 2
+
+----
+
+Time: 60
+
+----
+
+Link: https://madaster.com/
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Recyclebaarheid, CO2-verbruik productie, Biodiversiteit, Materialenpaspoort

@@ -1,0 +1,44 @@
+Title: PCIP
+
+----
+
+Short-description: Circulaire maatregelen toe te passen om producten te optimaliseren
+
+----
+
+Description: Het digitale platform genereert objectieve en data-gedreven rapportages. Hiermee probeert de tool te helpen om de eco-impact (zoals bijvoorbeeld CO2 uitstoot of eco-kosten) en circulariteit van het desbetreffende product te identificeren en onderbouwen en verbetermogelijkheden in kaart te brengen.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Afhankelijk van product
+
+----
+
+Price:
+
+- 
+  name: PCIP offerte
+  price: null
+
+----
+
+Difficulty: 3
+
+----
+
+Time: 120
+
+----
+
+Link: https://circular-iq.com/nl/product-circularity-improvement/
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Energieverbruik productie, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Transport, Restafval, Vervanging, Functionele waarde, Schaarste materialen, Biodiversiteit, Restwaarde, Materialenpaspoort

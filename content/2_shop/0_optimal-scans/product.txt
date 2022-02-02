@@ -1,0 +1,48 @@
+Title: Optimal SCANS
+
+----
+
+Short-description: MVI en beoordeling en monitoring van bedrijf, producten en diensten. Eenvoudig, flexibel en compleet.
+
+----
+
+Description: Optimal SCANS is een gebruiksvriendelijk instrument voor het ondersteunen van circulaire aankoopbeslissingen met visuele ondersteuning en rapportering. Het laat toe om analyses visueel voor te stellen via een model met vijf stappen en ook vergelijkingen mogelijk te maken tussen verschillende producten, diensten of bouwprojecten. Het bevat veel objectieve informatie en expertise.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Gegevens bedrijf en/of product
+- 
+  required: >
+    Huidige situatie rondom duurzaamheid en
+    circulariteit
+
+----
+
+Price:
+
+- 
+  name: Optimal SCANS
+  price: 5000
+
+----
+
+Difficulty: 3
+
+----
+
+Time: 360
+
+----
+
+Link: https://optimalplanet.nl/scans/
+
+----
+
+Company-tags: Energieverbruik bedrijf, Transport, Installaties, Meubilair, Verbruik materieel, Nutsvoorziening, Afvalscheiding, Voedsel
+
+----
+
+Product-tags: Levensduur, Energieverbruik productie, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Transport, Restafval, Vervanging, Functionele waarde, Schaarste materialen, Biodiversiteit, Restwaarde, Materialenpaspoort

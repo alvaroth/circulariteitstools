@@ -1,0 +1,50 @@
+Title: SPC Compass
+
+----
+
+Short-description: Duurzaamheid en circulariteit van verpakkingen bepalen
+
+----
+
+Description:
+
+Met het SPC Compass kunnen bedrijven de duurzaamheid van een verpakking bepalen aan de hand van drie pijlers: recyclebaarheid, circulariteit en milieu-impact. Daarnaast is het mogelijk om de huidige product-verpakkingscombinatie te vergelijken met andere alternatieven. 
+
+Op dit moment is de tool te gebruiken voor flexibele en vormvaste kunststof verpakkingen. De berekeningen zijn gebaseerd op de huidige situatie van sorteer- en recyclinginstallaties in Nederland. Het KIDV streeft ernaar om de tool in 2021 uit te breiden met de verpakkingsmaterialen papier, karton en glas. Verder kijkt het KIDV in samenwerking met het Afvalfonds Verpakkingen of de digitale module van de Recyclecheck in de toekomst kan worden gebruikt bij de aanvraag voor tariefdifferentiatie.
+
+----
+
+Pre-reqs:
+
+- 
+  required: >
+    Informatie over bestandsdelen
+    verpakking/product
+
+----
+
+Price:
+
+- 
+  name: SPC Compass offerte
+  price: null
+
+----
+
+Difficulty: 2
+
+----
+
+Time: 60
+
+----
+
+Link: https://kidv.rdc.makemeweb.dev/public/login
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Recyclebaarheid, Restafval, Biodiversiteit

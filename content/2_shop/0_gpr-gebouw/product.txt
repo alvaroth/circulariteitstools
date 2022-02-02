@@ -1,0 +1,51 @@
+Title: GPR-gebouw
+
+----
+
+Short-description: Een globale kijk opdoen hoe goed het bedrijf reeds scoort op duurzaamheid/circulariteit en waar het aan moet werken
+
+----
+
+Description:
+
+De mate van circulariteit van een gebouw wordt beoordeeld met de ‘CirculariteitsPrestatie Gebouwen’ (CPG). Dit is een door W/E adviseurs ontwikkelde index die met eenvoudig beschikbare data weergeeft hoe circulair een gebouw is. 
+
+GPR maakt gebruik van de CPG-methodiek, een door de Minister van Binnenlandse Zaken en Koninkrijksrelaties erkende duurzame bouw maatlatmethodiek. De methodiek is verwerkt in software en ontwikkeld voor gemeenten en regio’s, corporaties, vastgoedeigenaren, architecten, adviseurs en projectontwikkelaars die duurzaam bouwen in eigen hand willen nemen. Bovendien werkt een groot aantal opleidingen in Nederland met GPR Gebouw. De basis van de CirculariteitsPrestatie is de DuurzaamheidsPrestatie (MPG + EPG), aangevuld met andere bouwstenen uit GPR Gebouw die ook kwalitatieve aspecten adresseren.
+
+----
+
+Pre-reqs:
+
+- 
+  required: >
+    Informatie rondom energie, milieu,
+    gezondheid, gebruikskwaliteit en
+    toekomstwaarde
+
+----
+
+Price:
+
+- 
+  name: GPR offerte
+  price: null
+
+----
+
+Difficulty: 2
+
+----
+
+Time: 30
+
+----
+
+Link: https://www.gprsoftware.nl/
+
+----
+
+Company-tags: Energieverbruik bedrijf, Installaties, Nutsvoorziening
+
+----
+
+Product-tags: Recyclebaarheid, Restafval, Vervanging, Biodiversiteit

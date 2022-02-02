@@ -1,0 +1,58 @@
+Title: Circulytics
+
+----
+
+Short-description: Een circulaire bedrijfsvoering met behulp van een adviesbureau
+
+----
+
+Description:
+
+Circulytics ondersteunt de transitie van een bedrijf naar de circulaire economie, ongeacht branche, complexiteit en omvang. Deze gratis meettool op bedrijfsniveau gaat verder dan het beoordelen van producten en materiaalstromen en laat zien in hoeverre een bedrijf circulariteit heeft bereikt over zijn gehele bedrijfsvoering. 
+
+Bij deze tool dient wel te worden vermeld dat de uitvoerders/ rechtmatige eigenaren van de tool bedrijven beoordelen of zij gebruik mogen maken van de tool aan de hand van een aanvraagformulier. De kans op afwijzing is dus aanwezig.
+
+----
+
+Pre-reqs:
+
+- 
+  required: >
+    Algemene bedrijfsinformatie en
+    financiën
+- 
+  required: >
+    Inzicht in productieprocessen,
+    watergebruik en energie
+- 
+  required: >
+    Kennis van huidige situatie omtrent
+    circulariteit en innovatie
+
+----
+
+Price:
+
+- 
+  name: Circulytics
+  price: 0
+
+----
+
+Difficulty: 5
+
+----
+
+Time: 180
+
+----
+
+Link: https://ellenmacarthurfoundation.org/resources/circulytics/overview
+
+----
+
+Company-tags: Energieverbruik bedrijf, Meubilair, Verbruik materieel, Nutsvoorziening, Afvalscheiding, Voedsel
+
+----
+
+Product-tags: 

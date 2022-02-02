@@ -1,0 +1,48 @@
+Title: Cesar tool
+
+----
+
+Short-description: Een hulpmiddel dat tips en inzichten geeft om te verduurzamen
+
+----
+
+Description:
+
+Deze tool is bestemd voor alle organisaties die een impact hebben op een fysiek product. Hierbij richt het zich op opportuniteiten en hoe recycleerbare materialen en secundaire grondstoffen. Na het invullen van een vragenlijst ontvang je over de mail een overzicht met keuzes die maakbedrijven op korte termijn helpen om de circulaire ambities een duwtje in de rug te geven.
+
+Bekijk ook de video over de Cesar tool op: https://www.youtube.com/watch?v=0D-CgZcHGL4.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Uitgebreide productinformatie
+
+----
+
+Price:
+
+- 
+  name: Cesar tool
+  price: 0
+
+----
+
+Difficulty: 2
+
+----
+
+Time: 30
+
+----
+
+Link: https://s.surveyanyplace.com/avcmrhrz
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Recyclebaarheid, Transport, Restafval, Functionele waarde, Vervanging, Schaarste materialen, Restwaarde

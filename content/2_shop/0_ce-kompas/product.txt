@@ -1,0 +1,54 @@
+Title: CE Kompas
+
+----
+
+Short-description: Een hulpmiddel om een circulair project op te starten
+
+----
+
+Description:
+
+Het CE Kompas is een checklist die aangeeft welke accenten van circulaire economie je kan leggen in een circulair project. Het Kompas scoort een circulair project op 2 dimensies: ketenstappen en R-strategieën.  
+
+Ketenstappen zijn de klassieke stappen of fasen in de waardeketen van een bedrijf. Beginnend met het design van producten en diensten, het kiezen van grondstoffen, de eigenlijke productiefase, het regelen van de logistiek, de distributie, de gebruiksfase en tot slot het levenseinde van een product. Daarnaast werd ook een fase ‘strategie & beleid’ toegevoegd die gaat over het nemen van strategische beslissingen en aandacht voor de bredere inbedding van het project. 
+
+Er zijn heel wat manieren om zorg te dragen voor materialen en producten in een circulaire economie. Zulke mogelijkheden vind je vaak genoemd als zogenaamde R-strategieën (de letter R omdat in het Engels de meeste van deze strategieën met het voorvoegsel Re- beginnen). De vaakst geciteerde en meest bondige lijst bestaat uit drie van zulke strategieën: Reduce - Reuse - Recycle. Er zijn ook meer uitgebreide varianten, tot wel tien strategieën. 
+
+Er is ook een document dat gedownload kan worden waarmee het kompas handmatig doorgewerkt kan worden.
+
+----
+
+Pre-reqs:
+
+- 
+  required: >
+    Kennis van huidige beleid rondom
+    circulariteit
+
+----
+
+Price:
+
+- 
+  name: CE Kompas
+  price: 0
+
+----
+
+Difficulty: 1
+
+----
+
+Time: 30
+
+----
+
+Link: https://ce-kompas.vlaanderen-circulair.be/nl
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Transport, Restafval, Vervanging, Schaarste materialen, Restwaarde

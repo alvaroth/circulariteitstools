@@ -1,0 +1,52 @@
+Title: Circle assessment
+
+----
+
+Short-description: Consultancy voor ondersteuning bij verduurzaming
+
+----
+
+Description:
+
+Of uw organisatie nu al begonnen is met het implementeren van circulaire bedrijfsstrategieën, of net is begonnen met de transformatie om meer circulair te worden, deze tool heeft naar hun eigen zeggen een eenvoudige manier ontwikkeld om te diagnosticeren hoe uw huidige praktijken overeenkomen met circulaire doelstellingen. 
+
+Circle Assessment is een online tool om bedrijven te helpen de verschillende operationele en organisatorische aspecten van de circulaire economie te begrijpen, volgens de zeven specifieke categorieën die zijn gedefinieerd als de belangrijkste elementen van de circulaire economie.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Gegevens gebouw en producten
+- 
+  required: Huidige situatie circulariteit
+- 
+  required: Enige kennis van circulaire economie
+
+----
+
+Price:
+
+- 
+  name: Circle assessment
+  price: 0
+
+----
+
+Difficulty: 2
+
+----
+
+Time: 30
+
+----
+
+Link: https://circle-lab.com/assessment/
+
+----
+
+Company-tags: Energieverbruik bedrijf, Verbruik materieel, Nutsvoorziening, Afvalscheiding
+
+----
+
+Product-tags: 

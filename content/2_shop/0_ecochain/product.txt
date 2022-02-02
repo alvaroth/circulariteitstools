@@ -1,0 +1,57 @@
+Title: Ecochain
+
+----
+
+Short-description: Consultancy voor totale verduurzaming van uw bedrijf of product
+
+----
+
+Description:
+
+Met Ecochain is het mogelijk de footprint van alle producten in een keer te vergelijken. Identificeer de grootste hefboom om de uitstoot van uw bedrijf efficiënt te verminderen. Deze aanpak wordt de Activity-based Footprinting genoemd. Bij deze tool staat u in contact met een consultancy die u begeleidt door het gehele traject en u helpt te verduurzamen waarnaar wordt verlangd.
+
+Bekijk ook de video over Ecochain: 
+https://www.youtube.com/watch?v=zCRKvDyyHmI&feature=emb_imp_woyt
+
+----
+
+Pre-reqs:
+
+- 
+  required: 'Bedrijfs- en/of productinformatie'
+- 
+  required: >
+    Minimale kennis van duurzaamheid en
+    circulariteit
+- 
+  required: >
+    Doelen op het gebied van circulariteit
+    of duurzaamheid
+
+----
+
+Price:
+
+- 
+  name: Ecochain offerte
+  price: null
+
+----
+
+Difficulty: 4
+
+----
+
+Time: 1
+
+----
+
+Link: https://ecochain.com/nl/
+
+----
+
+Company-tags: Energieverbruik bedrijf, Transport, Installaties, Nutsvoorziening, Afvalscheiding
+
+----
+
+Product-tags: Levensduur, Energieverbruik productie, Recyclebaarheid, CO2-verbruik productie, Transport, Restafval, Vervanging, Schaarste materialen, Biodiversiteit, Restwaarde

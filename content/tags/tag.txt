@@ -2,4 +2,12 @@ Title: Tags
 
 ----
 
-Tags: test, test2, test3
+Tags-product: Levensduur, Energieverbruik productie, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Transport, Restafval, Vervanging, Functionele waarde, Schaarste materialen, Biodiversiteit, Restwaarde, Materialenpaspoort
+
+----
+
+Tags-company: Energieverbruik bedrijf, Transport, Installaties, Meubilair, Verbruik materieel, Nutsvoorziening, Afvalscheiding, Voedsel
+
+----
+
+Tags: Energieverbruik bedrijf, Transport bedrijf, Installaties, Meubilair, Materieel, Nutsvoorziening, Afvalscheiding, Voedsel, Levensduur product, Energieverbruik productie, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Transport product, Restafval productie, Vervangingsmogelijkheid, Functionele waarde materialen, Schaarste materialen, Biodiversiteit, Restwaarde product, Materialenpaspoort

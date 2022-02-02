@@ -1,0 +1,61 @@
+Title: GSES
+
+----
+
+Short-description: Materiaalstromen in kaart brengen
+
+----
+
+Description:
+
+Het Global Sustainable Enterprise System (GSES) is een erkend platform dat u helpt bij het beoordelen, verifiëren en certificeren van uw duurzaamheidsprestaties op proces-, supply chain- en productniveau. Geen verwarring meer door een overdaad aan complexe informatie en regelgeving. Het systeem brengt gemakkelijk en kosteneffectief meer dan 500 ecolabels en duurzame certificaten op één lijn en maakt gebruik van wereldwijd geaccepteerde normen om duurzaamheidsprestaties holistisch te meten. 
+
+Het platform biedt meerdere analyses aan waarvan er in de afbeeldingen enkele staan.
+
+Alle prijzen zijn vanaf-prijzen, er kunnen extra mogelijkheden bijgekocht worden.
+
+----
+
+Pre-reqs:
+
+- 
+  required: Productinformatie
+- 
+  required: Huidige situatie rondom circulariteit
+
+----
+
+Price:
+
+- 
+  name: Limited features
+  price: 0
+- 
+  name: Full features
+  price: 490
+- 
+  name: Pro features
+  price: 490
+- 
+  name: Product features
+  price: 750
+
+----
+
+Difficulty: 5
+
+----
+
+Time: 1
+
+----
+
+Link: https://gses-system.com/
+
+----
+
+Company-tags: 
+
+----
+
+Product-tags: Levensduur, Giftige stoffen, Recyclebaarheid, CO2-verbruik productie, Restafval, Functionele waarde, Schaarste materialen, Restwaarde, Materialenpaspoort
