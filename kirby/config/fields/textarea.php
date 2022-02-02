@@ -109,7 +109,7 @@ return [
 
                         return [
                             'filename' => $file->filename(),
-                            'dragText' => $file->panel()->dragText('auto', $absolute),
+                            'dragText' => $file->dragText('auto', $absolute),
                         ];
                     });
                 }

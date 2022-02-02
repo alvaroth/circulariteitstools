@@ -169,10 +169,24 @@ class PageRules
             return true;
         }
 
-        static::publish($page);
+        if ($page->permissions()->changeStatus() !== true) {
+            throw new PermissionException([
+                'key'  => 'page.changeStatus.permission',
+                'data' => [
+                    'slug' => $page->slug()
+                ]
+            ]);
+        }
 
         if ($position !== null && $position < 0) {
             throw new InvalidArgumentException(['key' => 'page.num.invalid']);
+        }
+
+        if ($page->isDraft() === true && empty($page->errors()) === false) {
+            throw new PermissionException([
+                'key'     => 'page.changeStatus.incomplete',
+                'details' => $page->errors()
+            ]);
         }
 
         return true;
@@ -187,7 +201,14 @@ class PageRules
      */
     public static function changeStatusToUnlisted(Page $page)
     {
-        static::publish($page);
+        if ($page->permissions()->changeStatus() !== true) {
+            throw new PermissionException([
+                'key'  => 'page.changeStatus.permission',
+                'data' => [
+                    'slug' => $page->slug()
+                ]
+            ]);
+        }
 
         return true;
     }
@@ -351,34 +372,6 @@ class PageRules
         }
 
         self::validateSlugLength($slug);
-
-        return true;
-    }
-
-    /**
-     * Check if the page can be published
-     * (status change from draft to listed or unlisted)
-     *
-     * @param Page $page
-     * @return bool
-     */
-    public static function publish(Page $page): bool
-    {
-        if ($page->permissions()->changeStatus() !== true) {
-            throw new PermissionException([
-                'key'  => 'page.changeStatus.permission',
-                'data' => [
-                    'slug' => $page->slug()
-                ]
-            ]);
-        }
-
-        if ($page->isDraft() === true && empty($page->errors()) === false) {
-            throw new PermissionException([
-                'key'     => 'page.changeStatus.incomplete',
-                'details' => $page->errors()
-            ]);
-        }
 
         return true;
     }

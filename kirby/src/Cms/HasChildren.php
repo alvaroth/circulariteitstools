@@ -2,7 +2,6 @@
 
 namespace Kirby\Cms;
 
-use Kirby\Filesystem\Dir;
 use Kirby\Toolkit\Str;
 
 /**
@@ -17,21 +16,21 @@ use Kirby\Toolkit\Str;
 trait HasChildren
 {
     /**
-     * The list of available published children
+     * The Pages collection
      *
      * @var \Kirby\Cms\Pages
      */
     public $children;
 
     /**
-     * The list of available draft children
+     * The list of available drafts
      *
      * @var \Kirby\Cms\Pages
      */
     public $drafts;
 
     /**
-     * Returns all published children
+     * Returns the Pages collection
      *
      * @return \Kirby\Cms\Pages
      */
@@ -45,7 +44,7 @@ trait HasChildren
     }
 
     /**
-     * Returns all published and draft children at the same time
+     * Returns all children and drafts at the same time
      *
      * @return \Kirby\Cms\Pages
      */
@@ -55,8 +54,8 @@ trait HasChildren
     }
 
     /**
-     * Returns a list of IDs for the model's
-     * `toArray` method
+     * Return a list of ids for the model's
+     * toArray method
      *
      * @return array
      */
@@ -66,7 +65,7 @@ trait HasChildren
     }
 
     /**
-     * Searches for a draft child by ID
+     * Searches for a child draft by id
      *
      * @param string $path
      * @return \Kirby\Cms\Page|null
@@ -100,7 +99,7 @@ trait HasChildren
     }
 
     /**
-     * Returns all draft children
+     * Return all drafts of the model
      *
      * @return \Kirby\Cms\Pages
      */
@@ -124,7 +123,7 @@ trait HasChildren
     }
 
     /**
-     * Finds one or multiple published children by ID
+     * Finds one or multiple children by id
      *
      * @param string ...$arguments
      * @return \Kirby\Cms\Page|\Kirby\Cms\Pages|null
@@ -135,7 +134,7 @@ trait HasChildren
     }
 
     /**
-     * Finds a single published or draft child
+     * Finds a single page or draft
      *
      * @param string $path
      * @return \Kirby\Cms\Page|null
@@ -146,7 +145,7 @@ trait HasChildren
     }
 
     /**
-     * Returns a collection of all published children of published children
+     * Returns a collection of all children of children
      *
      * @return \Kirby\Cms\Pages
      */
@@ -156,7 +155,7 @@ trait HasChildren
     }
 
     /**
-     * Checks if the model has any published children
+     * Checks if the model has any children
      *
      * @return bool
      */
@@ -166,7 +165,7 @@ trait HasChildren
     }
 
     /**
-     * Checks if the model has any draft children
+     * Checks if the model has any drafts
      *
      * @return bool
      */
@@ -198,7 +197,7 @@ trait HasChildren
     /**
      * Creates a flat child index
      *
-     * @param bool $drafts If set to `true`, draft children are included
+     * @param bool $drafts
      * @return \Kirby\Cms\Pages
      */
     public function index(bool $drafts = false)
@@ -211,7 +210,7 @@ trait HasChildren
     }
 
     /**
-     * Sets the published children collection
+     * Sets the Children collection
      *
      * @param array|null $children
      * @return $this
@@ -226,7 +225,7 @@ trait HasChildren
     }
 
     /**
-     * Sets the draft children collection
+     * Sets the Drafts collection
      *
      * @param array|null $drafts
      * @return $this

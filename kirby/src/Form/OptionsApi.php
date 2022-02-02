@@ -7,6 +7,7 @@ use Kirby\Exception\Exception;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Http\Remote;
 use Kirby\Http\Url;
+use Kirby\Toolkit\Escape;
 use Kirby\Toolkit\Properties;
 use Kirby\Toolkit\Query;
 use Kirby\Toolkit\Str;
@@ -26,17 +27,17 @@ class OptionsApi
     use Properties;
 
     /**
-     * @var array
+     * @var
      */
     protected $data;
 
     /**
-     * @var string|null
+     * @var
      */
     protected $fetch;
 
     /**
-     * @var array|string|null
+     * @var
      */
     protected $options;
 
@@ -46,7 +47,7 @@ class OptionsApi
     protected $text = '{{ item.value }}';
 
     /**
-     * @var string
+     * @var
      */
     protected $url;
 
@@ -89,7 +90,11 @@ class OptionsApi
     protected function field(string $field, array $data): string
     {
         $value = $this->$field();
-        return Str::safeTemplate($value, $data);
+        return Str::template($value, $data, [
+            'callback' => function ($result) {
+                return Escape::html($result);
+            }
+        ]);
     }
 
     /**
@@ -161,14 +166,14 @@ class OptionsApi
      * @param string|null $fetch
      * @return $this
      */
-    protected function setFetch(?string $fetch = null)
+    protected function setFetch(string $fetch = null)
     {
         $this->fetch = $fetch;
         return $this;
     }
 
     /**
-     * @param array|string|null $options
+     * @param $options
      * @return $this
      */
     protected function setOptions($options = null)
@@ -178,30 +183,30 @@ class OptionsApi
     }
 
     /**
-     * @param string $text
+     * @param $text
      * @return $this
      */
-    protected function setText(?string $text = null)
+    protected function setText($text = null)
     {
         $this->text = $text;
         return $this;
     }
 
     /**
-     * @param string $url
+     * @param $url
      * @return $this
      */
-    protected function setUrl(string $url)
+    protected function setUrl($url)
     {
         $this->url = $url;
         return $this;
     }
 
     /**
-     * @param string|null $value
+     * @param null $value
      * @return $this
      */
-    protected function setValue(?string $value = null)
+    protected function setValue($value = null)
     {
         $this->value = $value;
         return $this;
@@ -210,7 +215,7 @@ class OptionsApi
     /**
      * @return string
      */
-    public function text(): string
+    public function text()
     {
         return $this->text;
     }
@@ -235,7 +240,7 @@ class OptionsApi
     /**
      * @return string
      */
-    public function value(): string
+    public function value()
     {
         return $this->value;
     }

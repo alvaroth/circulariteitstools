@@ -4,7 +4,7 @@ namespace Kirby\Cms;
 
 use Kirby\Data\Data;
 use Kirby\Exception\Exception;
-use Kirby\Filesystem\F;
+use Kirby\Toolkit\F;
 
 /**
  * Manages all content lock files

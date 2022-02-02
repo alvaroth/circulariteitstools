@@ -1,6 +1,7 @@
 <?php
 
 use Kirby\Cms\File;
+use Kirby\Toolkit\Escape;
 use Kirby\Toolkit\I18n;
 
 return [
@@ -28,7 +29,7 @@ return [
             return $image ?? [];
         },
         /**
-         * Optional info text setup. Info text is shown on the right (lists, cardlets) or below (cards) the filename.
+         * Optional info text setup. Info text is shown on the right (lists) or below (cards) the filename.
          */
         'info' => function ($info = null) {
             return I18n::translate($info, $info);
@@ -69,7 +70,6 @@ return [
             if ($this->template) {
                 $file = new File([
                     'filename' => 'tmp',
-                    'parent'   => $this->model(),
                     'template' => $this->template
                 ]);
 
@@ -90,7 +90,7 @@ return [
             if ($this->sortBy) {
                 $files = $files->sort(...$files::sortArgs($this->sortBy));
             } else {
-                $files = $files->sorted();
+                $files = $files->sort('sort', 'asc', 'filename', 'asc');
             }
 
             // flip
@@ -115,21 +115,28 @@ return [
             $dragTextAbsolute = $this->model->is($this->parent) === false;
 
             foreach ($this->files as $file) {
-                $panel = $file->panel();
+                $image = $file->panelImage($this->image);
+
+                // escape the default text
+                // TODO: no longer needed in 3.6
+                $text = $file->toString($this->text);
+                if ($this->text === '{{ file.filename }}') {
+                    $text = Escape::html($text);
+                }
 
                 $data[] = [
-                    'dragText'  => $panel->dragText('auto', $dragTextAbsolute),
+                    'dragText' => $file->dragText('auto', $dragTextAbsolute),
                     'extension' => $file->extension(),
-                    'filename'  => $file->filename(),
-                    'id'        => $file->id(),
-                    'image'     => $panel->image($this->image, $this->layout),
-                    'info'      => $file->toSafeString($this->info ?? false),
-                    'link'      => $panel->url(true),
-                    'mime'      => $file->mime(),
-                    'parent'    => $file->parent()->panel()->path(),
-                    'template'  => $file->template(),
-                    'text'      => $file->toSafeString($this->text),
-                    'url'       => $file->url(),
+                    'filename' => $file->filename(),
+                    'id'       => $file->id(),
+                    'icon'     => $file->panelIcon($image),
+                    'image'    => $image,
+                    'info'     => $file->toString($this->info ?? false),
+                    'link'     => $file->panelUrl(true),
+                    'mime'     => $file->mime(),
+                    'parent'   => $file->parent()->panelPath(),
+                    'text'     => $text,
+                    'url'      => $file->url(),
                 ];
             }
 
@@ -167,8 +174,8 @@ return [
             ];
         },
         'link' => function () {
-            $modelLink  = $this->model->panel()->url(true);
-            $parentLink = $this->parent->panel()->url(true);
+            $modelLink  = $this->model->panelUrl(true);
+            $parentLink = $this->parent->panelUrl(true);
 
             if ($modelLink !== $parentLink) {
                 return $parentLink;
@@ -215,7 +222,6 @@ return [
                 'max'        => $max,
                 'api'        => $this->parent->apiUrl(true) . '/files',
                 'attributes' => array_filter([
-                    'sort'     => $this->sortable === true ? $total + 1 : null,
                     'template' => $template
                 ])
             ];

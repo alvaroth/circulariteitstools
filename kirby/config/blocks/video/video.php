@@ -1,7 +1,7 @@
 <?php /** @var \Kirby\Cms\Block $block */ ?>
-<?php if ($video = video($block->url())): ?>
+<?php if ($block->url()->isNotEmpty()): ?>
 <figure>
-  <?= $video ?>
+  <?= video($block->url()) ?>
   <?php if ($block->caption()->isNotEmpty()): ?>
   <figcaption><?= $block->caption() ?></figcaption>
   <?php endif ?>

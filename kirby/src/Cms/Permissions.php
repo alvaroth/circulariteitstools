@@ -27,12 +27,10 @@ class Permissions
      */
     protected $actions = [
         'access' => [
-            'account'   => true,
-            'languages' => true,
-            'panel'     => true,
-            'site'      => true,
-            'system'    => true,
-            'users'     => true,
+            'panel'    => true,
+            'settings' => true,
+            'site'     => true,
+            'users'    => true,
         ],
         'files' => [
             'changeName' => true,
@@ -159,12 +157,6 @@ class Permissions
      */
     protected function setAction(string $category, string $action, $setting)
     {
-        // deprecated fallback for the settings/system view
-        // TODO: remove in 3.7
-        if ($category === 'access' && $action === 'settings') {
-            $action = 'system';
-        }
-
         // wildcard to overwrite the entire category
         if ($action === '*') {
             return $this->setCategory($category, $setting);

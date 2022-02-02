@@ -2,7 +2,6 @@
 
 namespace Kirby\Text;
 
-use Kirby\Cms\App;
 use Kirby\Exception\BadMethodCallException;
 use Kirby\Exception\InvalidArgumentException;
 
@@ -46,20 +45,9 @@ class KirbyTag
             $type = static::$aliases[$type];
         }
 
-        $kirby    = $data['kirby'] ?? App::instance();
-        $defaults = $kirby->option('kirbytext.' . $type, []);
-        $attrs    = array_replace($defaults, $attrs);
-
-        // all available tag attributes
-        $availableAttrs = static::$types[$type]['attr'] ?? [];
-
         foreach ($attrs as $attrName => $attrValue) {
             $attrName = strtolower($attrName);
-
-            // applies only defined attributes to safely update
-            if (in_array($attrName, $availableAttrs) === true) {
-                $this->{$attrName} = $attrValue;
-            }
+            $this->$attrName = $attrValue;
         }
 
         $this->attrs   = $attrs;
@@ -85,51 +73,6 @@ class KirbyTag
     public static function factory(...$arguments)
     {
         return (new static(...$arguments))->render();
-    }
-
-    /**
-     * Finds a file for the given path.
-     * The method first searches the file
-     * in the current parent, if it's a page.
-     * Afterwards it uses Kirby's global file finder.
-     *
-     * @param string $path
-     * @return \Kirby\Cms\File|null
-     */
-    public function file(string $path)
-    {
-        $parent = $this->parent();
-
-        if (
-            is_object($parent) === true &&
-            method_exists($parent, 'file') === true &&
-            $file = $parent->file($path)
-        ) {
-            return $file;
-        }
-
-        if (
-            is_a($parent, 'Kirby\Cms\File') === true &&
-            $file = $parent->page()->file($path)
-        ) {
-            return $file;
-        }
-
-        return $this->kirby()->file($path, null, true);
-    }
-    /**
-     * Returns the current Kirby instance
-     *
-     * @return \Kirby\Cms\App
-     */
-    public function kirby()
-    {
-        return $this->data['kirby'] ?? App::instance();
-    }
-
-    public function option(string $key, $default = null)
-    {
-        return $this->options[$key] ?? $default;
     }
 
     /**
@@ -183,14 +126,9 @@ class KirbyTag
         return new static($type, $value, $attributes, $data, $options);
     }
 
-    /**
-     * Returns the parent model
-     *
-     * @return \Kirby\Cms\Model|null
-     */
-    public function parent()
+    public function option(string $key, $default = null)
     {
-        return $this->data['parent'];
+        return $this->options[$key] ?? $default;
     }
 
     public function render(): string

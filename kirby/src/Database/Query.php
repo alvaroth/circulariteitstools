@@ -341,7 +341,7 @@ class Query
      */
     public function innerJoin($table, $on)
     {
-        return $this->join($table, $on, 'inner join');
+        return $this->join($table, $on, 'inner');
     }
 
     /**
@@ -710,7 +710,7 @@ class Query
             $this->database->fail();
         }
 
-        $result = $this->database->execute($sql['query'], $sql['bindings']);
+        $result = $this->database->execute($sql['query'], $sql['bindings'], $params);
 
         $this->reset();
 
@@ -1009,8 +1009,9 @@ class Query
                     $key = $sql->columnName($this->table, $args[0]);
 
                     // ->where('username', 'in', ['myuser', 'myotheruser']);
-                    $predicate = trim(strtoupper($args[1]));
                     if (is_array($args[2]) === true) {
+                        $predicate = trim(strtoupper($args[1]));
+
                         if (in_array($predicate, ['IN', 'NOT IN']) === false) {
                             throw new InvalidArgumentException('Invalid predicate ' . $predicate);
                         }
@@ -1028,8 +1029,11 @@ class Query
                         // add that to the where clause in parenthesis
                         $result = $key . ' ' . $predicate . ' (' . implode(', ', $values) . ')';
 
+                        $this->bindings($bindings);
+
                     // ->where('username', 'like', 'myuser');
                     } else {
+                        $predicate  = trim(strtoupper($args[1]));
                         $predicates = [
                             '=', '>=', '>', '<=', '<', '<>', '!=', '<=>',
                             'IS', 'IS NOT',
@@ -1047,8 +1051,9 @@ class Query
                         $bindings[$valueBinding] = $args[2];
 
                         $result = $key . ' ' . $predicate . ' ' . $valueBinding;
+
+                        $this->bindings($bindings);
                     }
-                    $this->bindings($bindings);
                 }
 
                 break;

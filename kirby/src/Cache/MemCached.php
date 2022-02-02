@@ -16,7 +16,7 @@ use Memcached as MemcachedExt;
 class MemCached extends Cache
 {
     /**
-     * store for the memcache connection
+     * store for the memache connection
      * @var \Memcached
      */
     protected $connection;

@@ -71,9 +71,9 @@ class V
 
             if (is_array($value) === true) {
                 try {
-                    foreach ($value as $key => $item) {
+                    foreach ($value as $index => $item) {
                         if (is_array($item) === true) {
-                            $value[$key] = implode('|', $item);
+                            $value[$index] = implode('|', $item);
                         }
                     }
                     $value = implode(', ', $value);

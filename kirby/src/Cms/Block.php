@@ -22,8 +22,6 @@ class Block extends Item
 {
     const ITEMS_CLASS = '\Kirby\Cms\Blocks';
 
-    use HasMethods;
-
     /**
      * @var \Kirby\Cms\Content
      */
@@ -33,13 +31,6 @@ class Block extends Item
      * @var bool
      */
     protected $isHidden;
-
-    /**
-     * Registry with all block models
-     *
-     * @var array
-     */
-    public static $models = [];
 
     /**
      * @var string
@@ -55,11 +46,6 @@ class Block extends Item
      */
     public function __call(string $method, array $args = [])
     {
-        // block methods
-        if ($this->hasMethod($method)) {
-            return $this->callMethod($method, $args);
-        }
-
         return $this->content()->get($method);
     }
 
@@ -67,7 +53,7 @@ class Block extends Item
      * Creates a new block object
      *
      * @param array $params
-     * @throws \Kirby\Exception\InvalidArgumentException
+     * @param \Kirby\Cms\Blocks $siblings
      */
     public function __construct(array $params)
     {
@@ -83,7 +69,7 @@ class Block extends Item
 
         $this->content  = $params['content']  ?? [];
         $this->isHidden = $params['isHidden'] ?? false;
-        $this->type     = $params['type'];
+        $this->type     = $params['type']     ?? null;
 
         // create the content object
         $this->content = new Content($this->content, $this->parent);
@@ -103,13 +89,13 @@ class Block extends Item
      * Deprecated method to return the block type
      *
      * @deprecated 3.5.0 Use `\Kirby\Cms\Block::type()` instead
+     * @todo Add deprecated() helper warning in 3.6.0
      * @todo Remove in 3.7.0
      *
      * @return string
      */
     public function _key(): string
     {
-        deprecated('Block::_key() has been deprecated. Use Block::type() instead.');
         return $this->type();
     }
 
@@ -117,13 +103,13 @@ class Block extends Item
      * Deprecated method to return the block id
      *
      * @deprecated 3.5.0 Use `\Kirby\Cms\Block::id()` instead
+     * @todo Add deprecated() helper warning in 3.6.0
      * @todo Remove in 3.7.0
      *
      * @return string
      */
     public function _uid(): string
     {
-        deprecated('Block::_uid() has been deprecated. Use Block::id() instead.');
         return $this->id();
     }
 
@@ -166,38 +152,6 @@ class Block extends Item
     public function excerpt(...$args)
     {
         return Str::excerpt($this->toHtml(), ...$args);
-    }
-
-    /**
-     * Constructs a block object with registering blocks models
-     *
-     * @param array $params
-     * @return static
-     * @throws \Kirby\Exception\InvalidArgumentException
-     * @internal
-     */
-    public static function factory(array $params)
-    {
-        $type = $params['type'] ?? null;
-
-        if (empty($type) === false && $class = (static::$models[$type] ?? null)) {
-            $object = new $class($params);
-
-            if (is_a($object, 'Kirby\Cms\Block') === true) {
-                return $object;
-            }
-        }
-
-        // default model for blocks
-        if ($class = (static::$models['Kirby\Cms\Block'] ?? null)) {
-            $object = new $class($params);
-
-            if (is_a($object, 'Kirby\Cms\Block') === true) {
-                return $object;
-            }
-        }
-
-        return new static($params);
     }
 
     /**

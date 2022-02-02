@@ -167,14 +167,6 @@ class BlockConverter
         return static::editorHeading($params, 'h6');
     }
 
-    public static function editorHr(array $params): array
-    {
-        return [
-            'content' => [],
-            'type'    => 'line'
-        ];
-    }
-
     public static function editorHeading(array $params, string $level): array
     {
         return [

@@ -1,8 +1,8 @@
 <?php
 
 use Kirby\Cms\Blueprint;
-use Kirby\Exception\InvalidArgumentException;
 use Kirby\Toolkit\A;
+use Kirby\Toolkit\Escape;
 use Kirby\Toolkit\I18n;
 
 return [
@@ -89,13 +89,7 @@ return [
     ],
     'computed' => [
         'parent' => function () {
-            $parent = $this->parentModel();
-
-            if (is_a($parent, 'Kirby\Cms\Site') === false && is_a($parent, 'Kirby\Cms\Page') === false) {
-                throw new InvalidArgumentException('The parent is invalid. You must choose the site or a page as parent.');
-            }
-
-            return $parent;
+            return $this->parentModel();
         },
         'pages' => function () {
             switch ($this->status) {
@@ -157,25 +151,32 @@ return [
             $data = [];
 
             foreach ($this->pages as $item) {
-                $panel       = $item->panel();
                 $permissions = $item->permissions();
+                $image       = $item->panelImage($this->image);
+
+                // escape the default text
+                // TODO: no longer needed in 3.6
+                $text = $item->toString($this->text);
+                if ($this->text === '{{ page.title }}') {
+                    $text = Escape::html($text);
+                }
 
                 $data[] = [
-                    'dragText'    => $panel->dragText(),
                     'id'          => $item->id(),
-                    'image'       => $panel->image($this->image, $this->layout),
-                    'info'        => $item->toSafeString($this->info ?? false),
-                    'link'        => $panel->url(true),
+                    'dragText'    => $item->dragText(),
+                    'text'        => $text,
+                    'info'        => $item->toString($this->info ?? false),
                     'parent'      => $item->parentId(),
+                    'icon'        => $item->panelIcon($image),
+                    'image'       => $image,
+                    'link'        => $item->panelUrl(true),
+                    'status'      => $item->status(),
                     'permissions' => [
                         'sort'         => $permissions->can('sort'),
                         'changeSlug'   => $permissions->can('changeSlug'),
                         'changeStatus' => $permissions->can('changeStatus'),
-                        'changeTitle'  => $permissions->can('changeTitle'),
-                    ],
-                    'status'      => $item->status(),
-                    'template'    => $item->intendedTemplate()->name(),
-                    'text'        => $item->toSafeString($this->text),
+                        'changeTitle'  => $permissions->can('changeTitle')
+                    ]
                 ];
             }
 
@@ -225,8 +226,8 @@ return [
             return true;
         },
         'link' => function () {
-            $modelLink  = $this->model->panel()->url(true);
-            $parentLink = $this->parent->panel()->url(true);
+            $modelLink  = $this->model->panelUrl(true);
+            $parentLink = $this->parent->panelUrl(true);
 
             if ($modelLink !== $parentLink) {
                 return $parentLink;

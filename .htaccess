@@ -1,0 +1,20 @@
+DirectoryIndex index.php index.htm index.html
+
+# disable directory listing
+Options -Indexes
+
+# rewrite rules
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# make sure to set the RewriteBase correctly
+# for your domain and subfolders. Otherwise
+# the installation of kirby won't work
+
+RewriteBase /
+RewriteRule ^(.*) index.php [L]
+ 
+</IfModule>

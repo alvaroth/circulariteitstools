@@ -3,7 +3,7 @@
 namespace Kirby\Http;
 
 use Exception;
-use Kirby\Filesystem\F;
+use Kirby\Toolkit\F;
 use Throwable;
 
 /**

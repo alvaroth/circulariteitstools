@@ -2,9 +2,8 @@
 
 namespace Kirby\Cms;
 
-use Kirby\Exception\InvalidArgumentException;
-use Kirby\Filesystem\Dir;
-use Kirby\Filesystem\F;
+use Kirby\Toolkit\Dir;
+use Kirby\Toolkit\F;
 use Kirby\Toolkit\Str;
 
 /**
@@ -38,13 +37,12 @@ class Users extends Collection
      * an entire second collection to the
      * current collection
      *
-     * @param \Kirby\Cms\Users|\Kirby\Cms\User|string $object
+     * @param mixed $object
      * @return $this
-     * @throws \Kirby\Exception\InvalidArgumentException When no `User` or `Users` object or an ID of an existing user is passed
      */
     public function add($object)
     {
-        // add a users collection
+        // add a page collection
         if (is_a($object, self::class) === true) {
             $this->data = array_merge($this->data, $object->data);
 
@@ -55,11 +53,6 @@ class Users extends Collection
         // add a user object
         } elseif (is_a($object, 'Kirby\Cms\User') === true) {
             $this->__set($object->id(), $object);
-
-        // give a useful error message on invalid input;
-        // silently ignore "empty" values for compatibility with existing setups
-        } elseif (in_array($object, [null, false, true], true) !== true) {
-            throw new InvalidArgumentException('You must pass a Users or User object or an ID of an existing user to the Users collection');
         }
 
         return $this;
